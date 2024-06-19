@@ -21,6 +21,20 @@ defmodule Nvims.Server.Router.Vdisk do
     |> send_resp(200, Poison.encode!(response))
   end
 
+  get "/saves" do
+    Logger.info("GET SAVES 200 #{__MODULE__}")
+    response =
+      if Map.has_key?(conn.params, "uuid") do
+        Vdisk.get_saves(conn.params["uuid"])
+      else
+        "Query parameter <uuid> is required"
+      end
+
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(200, Poison.encode!(response))
+  end
+
   post "/" do
     Logger.info("POST 200 #{__MODULE__}")
 

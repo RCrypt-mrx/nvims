@@ -34,5 +34,8 @@ config.yml
 # binary file
 nvims
 
+# database file
+nvims_main
+
 # ElixirLS dir
 /.elixir_ls

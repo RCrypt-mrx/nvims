@@ -70,7 +70,7 @@ defmodule Nvims.Server.Router.Vswitch do
 
     valid_params = [
       "uuid",
-      "vmuuid"
+      "vm_uuid"
     ]
 
     response =
@@ -92,7 +92,7 @@ defmodule Nvims.Server.Router.Vswitch do
 
     valid_params = [
       "uuid",
-      "vmuuid"
+      "vm_uuid"
     ]
 
     response =
